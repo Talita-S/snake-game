@@ -1,0 +1,11 @@
+body {
+    height: 95vh;
+    width: 95;
+    display: flex;
+    justify-content: center; /*alinha horizontalmente*/
+    align-items: center; /*alinha verticalmente*/
+    flex-direction: column;
+    background-color: black;
+    color: #59cd90;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
