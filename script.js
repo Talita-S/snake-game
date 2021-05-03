@@ -6,6 +6,7 @@ snake[0] = { // define  tamanho da cobra de acordo com o tamanho e incrementa
     x: 8 * box,
     y: 8 * box
 }
+let direction = "right";
 
 function criarBG() {
     context.fillStyle = "#95f2d9";
@@ -19,5 +20,26 @@ function criarCobrinha(){ // preenche com a cor da cobra
     }
 }
 
-criarBG();
-criarCobrinha();
+function iniciarJogo() { // define o movimento da cobrinha
+    criarBG();
+    criarCobrinha();
+
+    let snakeX = snake[0].x; 
+    let snakeY = snake[0].y; 
+
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeX -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "down") snakeY += box;
+
+    snake.pop();
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    }
+
+    snake.unshift(newHead);
+}
+
+let jogo = setInterval(iniciarJogo, 100); // define que após 100 milisegundos o jogo começa e a cada 100 milisegundos ele atualiza para que não trave
