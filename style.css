@@ -9,3 +9,10 @@ body {
     color: #59cd90;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#botao {
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: linear-gradient(rgba(207, 252, 255),rgba(207, 252, 255)50%);
+}
